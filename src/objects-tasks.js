@@ -19,7 +19,8 @@
  */
 
 function shallowCopy(obj) {
-  return { ...obj }; // assign
+  const copy = {};
+  return Object.assign(copy, obj);
 }
 
 /**
@@ -29,7 +30,7 @@ function shallowCopy(obj) {
  * @param {Object[]} objects - The array of objects to merge
  * @return {Object} - The merged object
  *
- * @example
+ * @examples
  *    mergeObjects([{a: 1, b: 2}, {b: 3, c: 5}]) => {a: 1, b: 5, c: 5}
  *    mergeObjects([]) => {}
  */
